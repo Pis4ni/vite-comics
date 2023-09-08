@@ -1,8 +1,9 @@
+<!-- AppMap -->
 <script>
   export default {
     data(){
       return {
-        test:'App Content'
+        test:'App Map'
       }
     }
   }
@@ -11,7 +12,7 @@
 <template>
     <div>
         <p>
-            hi, i'm content {{ test }}            
+            hi, i'm a Map {{ test }}            
         </p>
     </div>
 </template>

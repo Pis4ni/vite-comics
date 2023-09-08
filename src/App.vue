@@ -2,13 +2,14 @@
 import AppHeader from './components/Appheader.vue'
 import AppContent from './components/AppContent.vue'
 import AppNav from './components/AppNav.vue'
+import AppMap from './components/AppMap.vue'
   export default {
     data(){
       return {
         title:'AppVue Working'
       }
     },
-    components: {AppHeader, AppContent, AppNav}
+    components: {AppHeader, AppContent, AppNav, AppMap}
   }
 </script>
 
@@ -22,6 +23,9 @@ import AppNav from './components/AppNav.vue'
   </section>
   <section class="deb">
     <AppNav></AppNav>
+  </section>
+  <section class="deb">
+    <AppMap></AppMap>
   </section>
   <h1>{{ title }}</h1>
 </main>
