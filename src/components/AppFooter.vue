@@ -1,10 +1,14 @@
 <!-- AppFooter -->
 <script>
+  import {buildImgPath} from '../utils/img'
   export default {
     data(){
       return {
-        test:'App Footer'
+        test:'App Footer',
       }
+    },
+    methods: {
+      buildImgPath
     }
   }
 </script>
