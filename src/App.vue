@@ -3,18 +3,20 @@ import AppHeader from './components/Appheader.vue'
 import AppContent from './components/AppContent.vue'
 import AppNav from './components/AppNav.vue'
 import AppMap from './components/AppMap.vue'
+import AppFooter from './components/AppFooter.vue'
   export default {
     data(){
       return {
         title:'AppVue Working'
       }
     },
-    components: {AppHeader, AppContent, AppNav, AppMap}
+    components: {AppHeader, AppContent, AppNav, AppMap, AppFooter }
   }
 </script>
 
 <template>
 <main>
+  <h1>{{ title }}</h1>
   <header class="deb">
     <AppHeader></AppHeader>
   </header>
@@ -27,7 +29,9 @@ import AppMap from './components/AppMap.vue'
   <section class="deb">
     <AppMap></AppMap>
   </section>
-  <h1>{{ title }}</h1>
+  <footer class="deb">
+    <AppFooter></AppFooter>
+  </footer>
 </main>
 </template>
 
