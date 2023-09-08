@@ -1,5 +1,5 @@
 <script>
-import {buildImgPath} from '../utils/img'
+import {buildImgPath} from '../utils/img.js'
   export default {
     data(){
       return {
@@ -62,50 +62,69 @@ import {buildImgPath} from '../utils/img'
 </script>
 
 <template>
-    <div class="mapContainer">
-      <div class="list" v-for="(element, i) in map">
-        <h3>
-        {{map[i].listName}}
-        </h3>
-        <ul>
-          <li v-for="(link, index) in map[i].listLinks">
-            {{map[i].listLinks[index]}}
-          </li>
-        </ul>
-
+  <div class="wrapper">
+    <div class="container g-0">
+      <div class="map-container py-4">
+        <div class="list" v-for="(element, i) in map">
+          <h6>
+          {{map[i].listName}}
+          </h6>
+          <ul class="me-2">
+            <li v-for="(link, index) in map[i].listLinks">
+              {{map[i].listLinks[index]}}
+            </li>
+          </ul>
+  
+        </div>
       </div>
       <img :src="buildImgPath(wathermark)" alt="">
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-.mapContainer{
-  color: #fffffe;
+.wrapper{
   background-image:url(../assets/img/footer-bg.jpg) ;
-  display: flex;
-  flex-direction: column;
-  align-content: flex-start;
-  flex-wrap: wrap;
-  max-height: 400px;
-  padding: 1rem;
-  position: relative;
-  overflow: hidden;
-  .list{
-    text-transform: uppercase;
-    ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      li{
-        text-transform: capitalize;
+  .container{
+    position: relative;
+    overflow: hidden;
+    .map-container{
+      color: #fffffe;
+      display: flex;
+      flex-direction: column;
+      align-content: flex-start;
+      flex-wrap: wrap;
+      max-height: 400px;
+      .list{
+        text-transform: uppercase;
+  
+        ul{
+          list-style: none;
+          margin: 0;
+          padding: 0;
+          li{
+            text-transform: capitalize;
+            color: #999999;
+            margin-right: 1rem;
+            font-size: .8rem;
+            cursor: pointer;
+            &:last-child{
+              margin-bottom: 1rem;
+            }
+            &:hover{
+              color: #fffffe;
+            }
+          }
+        }
       }
     }
+    img{
+      position:absolute;
+      right:0px;
+      top: 0;
+      transform: translateY(-20%);
+    }
   }
-  img{
-    position:absolute;
-    right:100px;
-    top: 0;
-    transform: translateY(-20%);
+    
   }
-}
 </style>

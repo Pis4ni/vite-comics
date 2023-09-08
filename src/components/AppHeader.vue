@@ -56,10 +56,11 @@
 </script>
 
 <template>
-    <div class="header-container">
+
+    <div class="header-container container g-0">
       <img :src="buildImgPath(logoImg)" alt="">
       <nav>
-        <ul>
+        <ul  class="h-100">
           <li v-for="(link, index) in links" >
             <a :href="links[index].link">{{ links[index].name }}</a>
           </li>
@@ -73,12 +74,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 130px;
   img{
-    margin: 1rem;
+    max-height: 4rem;
   }
   nav{
-    height: 100%;
     display: flex;
     ul{
       list-style: none;
@@ -86,6 +85,7 @@
       margin: 0;
       padding: 0;
       li{
+        padding: 2.3rem 0 ;
         display: flex;
         align-items: center;
         margin: 0 1rem;

@@ -16,19 +16,19 @@ import AppFooter from './components/AppFooter.vue'
 
 <template>
 <main>
-  <header class="deb">
+  <header>
     <AppHeader></AppHeader>
   </header>
-  <section class="deb">
+  <section>
     <AppContent></AppContent>
   </section>
-  <section class="deb">
+  <section>
     <AppNav></AppNav>
   </section>
-  <section class="deb">
+  <section>
     <AppMap></AppMap>
   </section>
-  <footer class="deb">
+  <footer>
     <AppFooter></AppFooter>
   </footer>
 </main>
@@ -40,7 +40,7 @@ import AppFooter from './components/AppFooter.vue'
     margin: 0;
     padding: 0;
   }
-  .deb{
-    border: 1px dashed red;
+  main{
+    height: 100vh;
   }
 </style>

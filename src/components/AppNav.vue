@@ -40,7 +40,8 @@
 </script>
 
 <template>
-    <div>
+  <div class="wrapper">
+    <div class="container">
       <div class="link-card" v-for="(card,index) in linkCards ">
         <div class="miniature">
           <img :src="buildImgPath(linkCards[index].imgName)" alt="">
@@ -50,33 +51,44 @@
         </span>
       </div>
     </div>
+  </div>
 </template>
 
 <style lang="scss" scoped>
-div{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem 0;
+.wrapper{
   background-color:#0c7cec ;
-  .link-card{
-    padding: 0 2rem;
+  div{
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: space-between;
-    .miniature{
-      height: 50px;
-      width: 50px;
-      img{
-        width:100%
+    padding: 1rem 0;
+    .link-card{
+      width: calc((100% - 5rem) / 5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:nth-child(4) > div > img{
+        height: 35px;
       }
-    }
-    span{
-      margin: 0 1rem;
-      color:#fafcfd ;
-      text-transform: uppercase;
-      text-wrap: nowrap;
+      .miniature{
+        width: 20%;
+        aspect-ratio: 1;
+        margin: 0 1rem 0 0 ;
+        
+        img{
+          width:100%;
+          max-height: 40px;
+          object-fit: contain;
+        }
+      }
+      span{
+        color:#fafcfd ;
+        text-transform: uppercase;
+        text-wrap: nowrap;
+        font-size: .8rem;
+      }
     }
   }
 }
