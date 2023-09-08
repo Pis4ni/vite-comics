@@ -16,7 +16,6 @@ import AppFooter from './components/AppFooter.vue'
 
 <template>
 <main>
-  <h1>{{ title }}</h1>
   <header class="deb">
     <AppHeader></AppHeader>
   </header>

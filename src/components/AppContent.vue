@@ -2,7 +2,7 @@
   export default {
     data(){
       return {
-        test:'App Content'
+        test:'~~--> Content goes here <--~~'
       }
     }
   }
@@ -11,11 +11,19 @@
 <template>
     <div>
         <p>
-            hi, i'm content {{ test }}            
+            {{ test }}            
         </p>
     </div>
 </template>
 
 <style lang="scss" scoped>
-
+div{
+  height: 100%;
+  background-color:#1c1c1c;
+  padding: 1rem;
+  p{
+    color:#f5fbfe;
+    margin: 0%;
+  }
+}
 </style>
