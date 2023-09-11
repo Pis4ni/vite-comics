@@ -1,9 +1,16 @@
 <script>
+//* ===========  Component =======================
 import AppHeader from './components/Appheader.vue'
 import AppContent from './components/AppContent.vue'
 import AppNav from './components/AppNav.vue'
 import AppMap from './components/AppMap.vue'
 import AppFooter from './components/AppFooter.vue'
+//* ===========  Component end ===================
+
+//* ===========  data ============================
+// import dcComics from "./data/index";
+
+//* ===========  data end ========================
   export default {
     data(){
       return {

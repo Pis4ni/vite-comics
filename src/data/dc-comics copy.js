@@ -1,10 +1,4 @@
-<script>
-import AppCard from './AppCard.vue'
-  export default {
-    data(){
-      return {
-        test:'Cards',
-        cards:[
+[
     {
       thumb: "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
       price: "$19.99",
@@ -77,42 +71,4 @@ import AppCard from './AppCard.vue'
       series: "Catwoman",
       type: "graphic novel"
     }
-              ],
-      }
-    },
-    components:{AppCard}
-  }
-</script>
-
-<template>
-  <div class="wrapper">
-    <div class="container">
-      <section class="comics-cards py-5">
-        <h2>
-          {{ test }}            
-        </h2>
-        
-        <div class="card-container py-3">
-          <AppCard v-for="(card, index) in cards" key="index" :thumb="card.thumb" :price="card.price" :series="card.series" :type="card.type"></AppCard>
-        </div>
-      </section>
-    </div>
-
-  </div>
-</template>
-
-<style lang="scss" scoped>
-.wrapper{
-  background-color:#1c1c1c;
-  section{
-    color: #ffffff;
-    .card-container{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-  }
-
-}
-</style>
+  ]
